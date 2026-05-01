@@ -15,14 +15,13 @@ public class FluxoControle {
         demostrarSwitch();
         demostrarForWhileDowhile();
         demostrarBreakContinue();
-
         exercicioClassificarIdade(18);
         exercicioDiaDaSemana(4);
         exercicioSomarAteLimite(5);
         exercicioContagemRegressiva(10);
         exercicioTabuada(7);
-
     }
+
     static void demostrarDeclaracaoEInicializacao(){
         System.out.println("--- Fundamentos de Fluxo de Controle ---");
         int quantidade ;
@@ -147,7 +146,7 @@ public class FluxoControle {
      * EXERCICIO 1: classificar idade com if/else.
      */
     public static String exercicioClassificarIdade(int idade){
-        System.out.println("\n--- Exercicio para classificar idade --- \n");
+        System.out.println("\n--- 01 Exercicio para classificar idade --- \n");
         if (idade >= 18){
             System.out.println("Voce é de maior, sua idade é: " + idade );
         } else{
@@ -160,7 +159,7 @@ public class FluxoControle {
      * EXERCICIO 2: converter numero em dia da semana com switch.
      */
     public static String exercicioDiaDaSemana(int numeroDia) {
-        System.out.println("\n---exercicio Dia Da Semana---\n");
+        System.out.println("\n--- 02 exercicio Dia Da Semana---\n");
             String nomeDoDia;
 
             switch (numeroDia){
@@ -198,7 +197,7 @@ public class FluxoControle {
      * EXERCICIO 3: somar numeros de 1 ate o limite usando for.
      */
     public static int exercicioSomarAteLimite(int limite) {
-        System.out.println("\n--- exercicio Somar Ate Limite ---\n ");
+        System.out.println("\n--- 03 exercicio Somar Ate Limite ---\n ");
 
         int soma = 0;
         //condicional de saida
@@ -216,7 +215,7 @@ public class FluxoControle {
      * EXERCICIO 4: contagem regressiva com while.
      */
     public static void exercicioContagemRegressiva(int inicio) {
-        System.out.print("\n--- exercicio Contagem Regressiva --- \n ");
+        System.out.print("\n---  04 exercicio Contagem Regressiva --- \n ");
         int Regressivo = 0;
         while ( inicio >= Regressivo) {
             System.out.print(inicio + " ");
@@ -229,7 +228,7 @@ public class FluxoControle {
      * EXERCICIO 5: tabuada com for.
      */
     public static void exercicioTabuada(int numero) {
-        System.out.print("\n--- exercicio Tabuada --- \n ");
+        System.out.print("\n---  05 exercicio Tabuada --- \n ");
 
         for (int x =0; x <= 10; x++ ){
             int multiplicao = numero * x;
