@@ -1,6 +1,5 @@
 package fluxo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class FluxoControle {
@@ -15,11 +14,13 @@ public class FluxoControle {
         demostrarSwitch();
         demostrarForWhileDowhile();
         demostrarBreakContinue();
+        // Exercicios
         exercicioClassificarIdade(18);
+        exercicioTabuada(7);
         exercicioDiaDaSemana(4);
+        // FIXME poderia ter feito uma validacao de valor acima 0 (para nao passar negativos) nos 2 exercicios abaixo
         exercicioSomarAteLimite(5);
         exercicioContagemRegressiva(10);
-        exercicioTabuada(7);
     }
 
     static void demostrarDeclaracaoEInicializacao(){
@@ -145,6 +146,7 @@ public class FluxoControle {
     /**
      * EXERCICIO 1: classificar idade com if/else.
      */
+    //FIXME (melhoria) se esta dando print no metodo, poderia alterar o retorno para void
     public static String exercicioClassificarIdade(int idade){
         System.out.println("\n--- 01 Exercicio para classificar idade --- \n");
         if (idade >= 18){
@@ -158,37 +160,23 @@ public class FluxoControle {
     /**
      * EXERCICIO 2: converter numero em dia da semana com switch.
      */
+    //FIXME (melhoria) se esta dando print no metodo, poderia alterar o retorno para void
     public static String exercicioDiaDaSemana(int numeroDia) {
         System.out.println("\n--- 02 exercicio Dia Da Semana---\n");
-            String nomeDoDia;
 
-            switch (numeroDia){
-                case 1:
-                    nomeDoDia = "Domingo";
-                    break;
-                case 2:
-                    nomeDoDia = "Segunda-feira";
-                    break;
-                case 3:
-                    nomeDoDia = "Terça-feira";
-                    break;
-                case 4:
-                    nomeDoDia = "Quarta-feira";
-                    break;
-                case 5:
-                    nomeDoDia = "Quinta-feira";
-                    break;
-                case 6:
-                    nomeDoDia = "Sexta-feira";
-                    break;
-                case 7:
-                    nomeDoDia = "Sábado";
-                    break;
-                default:
-                    nomeDoDia = "Dia inválido";
-                    break;
-            }
-             System.out.println("Dia " + numeroDia + ": " + nomeDoDia);
+            // FIXME (melhoria) usei a versao mais enxuta do switch usando lambda (java8)
+            String nomeDoDia = switch (numeroDia) {
+                case 1 -> "Domingo";
+                case 2 -> "Segunda-feira";
+                case 3 -> "Terça-feira";
+                case 4 -> "Quarta-feira";
+                case 5 -> "Quinta-feira";
+                case 6 -> "Sexta-feira";
+                case 7 -> "Sábado";
+                default -> "Dia inválido";
+            };
+
+        System.out.println("Dia " + numeroDia + ": " + nomeDoDia);
 
         return nomeDoDia;
     }
@@ -196,6 +184,7 @@ public class FluxoControle {
     /**
      * EXERCICIO 3: somar numeros de 1 ate o limite usando for.
      */
+    //FIXME (melhoria) se esta dando print no metodo, poderia alterar o retorno para void
     public static int exercicioSomarAteLimite(int limite) {
         System.out.println("\n--- 03 exercicio Somar Ate Limite ---\n ");
 
@@ -203,7 +192,7 @@ public class FluxoControle {
         //condicional de saida
         for (int i = 1; i <= limite; i++) {
              soma = soma  + i;
-
+             //FIXME (melhoria) poderia usar "soma += i", o operador += ou -= considera que está pegando o valor atual da variável e somando ou subtraindo o valor do lado direito, e depois atribuindo o resultado de volta à variável.
         }
         System.out.println(soma);
 
@@ -216,12 +205,12 @@ public class FluxoControle {
      */
     public static void exercicioContagemRegressiva(int inicio) {
         System.out.print("\n---  04 exercicio Contagem Regressiva --- \n ");
-        int Regressivo = 0;
+        int Regressivo = 0; //FIXME (correção) nome de variavel e metodo sempre minusculo, constante tudo Maiusculo, nome de classe padrao CamelCase (primeira letra sempre Maiuscula)
         while ( inicio >= Regressivo) {
             System.out.print(inicio + " ");
             inicio--;
         }
-        return;
+        return; // FIXME (correção) não há necessidade do return, pois o método é void, ou seja, não retorna nenhum valor.
     }
 
     /**
@@ -231,16 +220,12 @@ public class FluxoControle {
         System.out.print("\n---  05 exercicio Tabuada --- \n ");
 
         for (int x =0; x <= 10; x++ ){
-            int multiplicao = numero * x;
+            int multiplicao = numero * x; // FIXME (melhoria) não precisa declarar uma variavel se voce nao reaproveita depois
 
-        System.out.println("Tabuada: "+ x +" * " + numero +" = " + multiplicao );
+        System.out.println("Tabuada: "+ x +" * " + numero +" = " + multiplicao ); // poderia ter colocado (numero * x) aqui direto
         }
-        return;
+        return; // FIXME (correção) não há necessidade do return, pois o método é void, ou seja, não retorna nenhum valor.
     }
-
-
-
-
 
 }
 
