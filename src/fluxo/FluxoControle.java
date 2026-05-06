@@ -146,25 +146,21 @@ public class FluxoControle {
     /**
      * EXERCICIO 1: classificar idade com if/else.
      */
-    //FIXME (melhoria) se esta dando print no metodo, poderia alterar o retorno para void
-    public static String exercicioClassificarIdade(int idade){
+    public static void exercicioClassificarIdade(int idade){
         System.out.println("\n--- 01 Exercicio para classificar idade --- \n");
         if (idade >= 18){
             System.out.println("Voce é de maior, sua idade é: " + idade );
         } else{
             System.out.println("Voce é de menor, sua idade é: " + idade );
         }
-        return "";
     }
 
     /**
      * EXERCICIO 2: converter numero em dia da semana com switch.
      */
-    //FIXME (melhoria) se esta dando print no metodo, poderia alterar o retorno para void
-    public static String exercicioDiaDaSemana(int numeroDia) {
+    public static void exercicioDiaDaSemana(int numeroDia) {
         System.out.println("\n--- 02 exercicio Dia Da Semana---\n");
 
-            // FIXME (melhoria) usei a versao mais enxuta do switch usando lambda (java8)
             String nomeDoDia = switch (numeroDia) {
                 case 1 -> "Domingo";
                 case 2 -> "Segunda-feira";
@@ -177,26 +173,20 @@ public class FluxoControle {
             };
 
         System.out.println("Dia " + numeroDia + ": " + nomeDoDia);
-
-        return nomeDoDia;
     }
 
     /**
      * EXERCICIO 3: somar numeros de 1 ate o limite usando for.
      */
-    //FIXME (melhoria) se esta dando print no metodo, poderia alterar o retorno para void
-    public static int exercicioSomarAteLimite(int limite) {
+    public static void exercicioSomarAteLimite(int limite) {
         System.out.println("\n--- 03 exercicio Somar Ate Limite ---\n ");
 
         int soma = 0;
         //condicional de saida
         for (int i = 1; i <= limite; i++) {
-             soma = soma  + i;
-             //FIXME (melhoria) poderia usar "soma += i", o operador += ou -= considera que está pegando o valor atual da variável e somando ou subtraindo o valor do lado direito, e depois atribuindo o resultado de volta à variável.
+             soma += i;
         }
         System.out.println(soma);
-
-        return soma;
 
     }
 
@@ -205,12 +195,12 @@ public class FluxoControle {
      */
     public static void exercicioContagemRegressiva(int inicio) {
         System.out.print("\n---  04 exercicio Contagem Regressiva --- \n ");
-        int Regressivo = 0; //FIXME (correção) nome de variavel e metodo sempre minusculo, constante tudo Maiusculo, nome de classe padrao CamelCase (primeira letra sempre Maiuscula)
-        while ( inicio >= Regressivo) {
+        int regressivo = 0;
+        while ( inicio >= regressivo) {
             System.out.print(inicio + " ");
             inicio--;
         }
-        return; // FIXME (correção) não há necessidade do return, pois o método é void, ou seja, não retorna nenhum valor.
+
     }
 
     /**
@@ -220,11 +210,9 @@ public class FluxoControle {
         System.out.print("\n---  05 exercicio Tabuada --- \n ");
 
         for (int x =0; x <= 10; x++ ){
-            int multiplicao = numero * x; // FIXME (melhoria) não precisa declarar uma variavel se voce nao reaproveita depois
 
-        System.out.println("Tabuada: "+ x +" * " + numero +" = " + multiplicao ); // poderia ter colocado (numero * x) aqui direto
+        System.out.println("Tabuada: "+ x +" * " + numero +" = " + (numero * x) ); // poderia ter colocado (numero * x) aqui direto
         }
-        return; // FIXME (correção) não há necessidade do return, pois o método é void, ou seja, não retorna nenhum valor.
     }
 
 }
