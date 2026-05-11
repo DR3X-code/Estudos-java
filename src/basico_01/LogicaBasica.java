@@ -1,4 +1,4 @@
-package logica;
+package basico_01;
 
 import java.util.Arrays;
 
@@ -6,8 +6,6 @@ public class LogicaBasica {
 
     static void main() {
         executarAula();
-
-
     }
 
     static void executarAula() {
@@ -134,7 +132,7 @@ public class LogicaBasica {
 //tive que pesquisar sobre o length e como utilizar array
 
 
-//syntax de fluxo de controle
+//syntax de basico_01.fluxo de controle
 //metodos e parametros
 //switch case
 //loops
