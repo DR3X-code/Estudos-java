@@ -11,15 +11,15 @@ public class ExercicioPolimorfismo {
 
         //TODO 2. Adicionar canais a lista de central
         NotificacaoWhatsapp notificacaoWhatsapp = new NotificacaoWhatsapp();
-        centralNotificacao.adicionarCanal(notificacaoWhatsapp);
+        //centralNotificacao.adicionarCanal(notificacaoWhatsapp);
         // opcao 2: chamar metodo criarCanais(centralNotificacao.getCanais())
 
         //TODO 3. Chamar metodo para exibir quantidade de canais
-        System.out.println("Quantidade de Canais: " + centralNotificacao.getTotalCanais());
+        //System.out.println("Quantidade de Canais: " + centralNotificacao.getTotalCanais());
 
         //TODO 4. Chamar metodo para exibir quantidade de canais
         System.out.println("Canais cadastrados");
-        centralNotificacao.listarCanais().forEach(System.out::println);
+        //centralNotificacao.listarCanais().forEach(System.out::println);
 
         //TODO 5. Enviar notificacao para todos os canais cadastrados
         String destinatario = "Leandro";

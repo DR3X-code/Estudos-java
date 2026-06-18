@@ -6,6 +6,7 @@ import java.util.List;
 public class CentralNotificacao {
 
     /**
+     * todo
      * 1. Criar um atributo privado do tipo: List<Canais> chamado canais
      * 2. Criar um método publico do tipo void: chamado adicionarCanal, que recebe um parametro do tipo Canal e adiciona a lista de canais.
      * 3. Criar um método publico do tipo int: chamado getTotalCanais, que retorna a quantidade de canais cadastrados.
