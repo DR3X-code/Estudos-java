@@ -35,7 +35,8 @@ public class JdbcClienteRepository implements CrudRepository<Long, Cliente>{
         } catch (Exception e) {
             e.printStackTrace();
         }
-    } return null;
+        return null;
+    }
 
     @Override
     public void deletar(Long id) {
