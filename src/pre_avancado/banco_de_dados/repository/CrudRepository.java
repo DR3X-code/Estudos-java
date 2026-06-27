@@ -11,4 +11,6 @@ public interface CrudRepository <K,T>{
     void deletar(K id);
 
     T atualizar(T entidade);
+
+    T buscarPorId(K id);
 }

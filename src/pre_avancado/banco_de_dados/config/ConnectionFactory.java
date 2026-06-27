@@ -36,7 +36,7 @@ public class ConnectionFactory {
     public static ConnectionFactory getPostgreSQLConnectionFactory() {
         String usuario = "postgres";
         String url = "jdbc:postgresql://localhost:5432/postgres";
-        String senha = "dev123";
+        String senha = "postgres";
         return new ConnectionFactory(usuario, url, senha);
     }
 
