@@ -24,7 +24,7 @@ public class ClienteController {
 
         //R:Listando clientes
         //service.listar().forEach(System.out::println);
-        Cliente cliente1Atualizacao = service.buscarPorId(2L);
+        Cliente cliente1Atualizacao = service.buscarPorId(20L);
 
         //U:atualiazar
         cliente1Atualizacao.setNome("joao Atualizado");
@@ -32,7 +32,7 @@ public class ClienteController {
         //service.listar().forEach(System.out::println);
 
         //D:deletar
-        service.deletar(3L);
+        service.deletar(2L);
         service.listar().forEach(System.out::println);
 
     }

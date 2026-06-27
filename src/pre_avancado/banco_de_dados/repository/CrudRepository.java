@@ -13,4 +13,6 @@ public interface CrudRepository <K,T>{
     T atualizar(T entidade);
 
     T buscarPorId(K id);
+
+
 }
