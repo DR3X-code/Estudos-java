@@ -1,7 +1,6 @@
 package pre_avancado.banco_de_dados.repository;
 
 import pre_avancado.banco_de_dados.config.ConnectionFactory;
-import pre_avancado.banco_de_dados.dominio.Cliente;
 import pre_avancado.banco_de_dados.dominio.Produto;
 
 import java.sql.*;
@@ -58,8 +57,6 @@ public class JdbcProdutoRepository implements CrudRepository<Long, Produto> {
                 PreparedStatement statement = connection.prepareStatement(sql);
                 ResultSet resultSet = statement.executeQuery();
         ) {
-            //executar a query
-
 
             //nao vai ter substituincao de valores ate o momento
             List<Produto> produtos = new ArrayList<>();
@@ -144,11 +141,7 @@ public class JdbcProdutoRepository implements CrudRepository<Long, Produto> {
 
         produto.setDataCriacao(resultSet.getTimestamp("data_criacao").toInstant());
 
-        produto.setDataAtualizacao(
-                resultSet.getTimestamp("data_atualizacao") != null
-                        ? resultSet.getTimestamp("data_atualizacao").toInstant()
-                        : null
-        );
+        produto.setDataAtualizacao(resultSet.getTimestamp("data_atualizacao") != null ? resultSet.getTimestamp("data_atualizacao").toInstant() : null);
 
         return produto;
     }
